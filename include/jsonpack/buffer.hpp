@@ -68,8 +68,16 @@ public:
 
     void erase_last_comma()
     {
-        if(_size > 0 && _data[_size-1] == ',')
-            _size--;
+		 bool hadNewLine = false;
+		 if(_size > 0 && _data[_size-1] == '\n') {
+			hadNewLine = true;
+		 	_size--;
+		 }
+		 if(_size > 0 && _data[_size-1] == ',')
+			 _size--;
+		 
+		 if(hadNewLine)
+			 append("\n", 1);
     }
 
     char* data()

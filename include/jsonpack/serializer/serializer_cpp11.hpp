@@ -38,7 +38,7 @@ static inline void make_json(buffer &json, const std::string &keys, const T& val
     std::string::size_type pos = keys.find(',');
 
     type::json_traits<T>::append(json, keys.substr(0, pos).c_str() , val);
-
+    json.append("\n", 1);
     make_json(json, keys.substr(pos+1, keys.length()-1 ).c_str() ,values...);
 }
 

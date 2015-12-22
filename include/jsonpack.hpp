@@ -46,7 +46,7 @@
     {                                                                   \
         std::string _keys = jsonpack::util::trim( std::string(#__VA_ARGS__) );\
         jsonpack::buffer json;                                          \
-        json.append( "{" , 1);                                          \
+        json.append( "{\n" , 2);                                          \
         jsonpack::make_json(json, _keys ,__VA_ARGS__);                  \
         return json.release();                                          \
     }                                                                   \
