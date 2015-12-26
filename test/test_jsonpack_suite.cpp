@@ -70,7 +70,7 @@ BOOST_AUTO_TEST_CASE(unpack_array_fail_json_org)
                     //"json_tests/fail26.json",	// ["tab\   character\   in\  string\  "]
                     //"json_tests/fail27.json",	// ["line 
 												//	break"]
-                    //"json_tests/fail28.json",	// ["line\ 
+                    //"json_tests/fail28.json",	// ["line
 												//	break"]
                     "json_tests/fail29.json",
                     "json_tests/fail30.json",
