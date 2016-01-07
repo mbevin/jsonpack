@@ -15,8 +15,10 @@
 // This is a C++ header-only implementation of Grisu2 algorithm from the publication:
 // Loitsch, Florian. "Printing floating-point numbers quickly and accurately with
 // integers." ACM Sigplan Notices 45.6 (2010): 233-243.
-
 #pragma once
+
+#ifndef UINT64_C2 // avoid this clashing when using within multiple libraries ....
+
 #include <assert.h>
 #include <math.h>
 #include <stdint.h>
@@ -409,3 +411,5 @@ inline void dtoa_milo(double value, char* buffer) {
         Prettify(buffer, length, K);
 	}
 }
+
+#endif //UINT64_C2
